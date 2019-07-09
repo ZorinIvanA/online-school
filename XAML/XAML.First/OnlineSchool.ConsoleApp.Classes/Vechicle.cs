@@ -4,11 +4,13 @@ using System.Text;
 
 namespace OnlineSchool.ConsoleApp.Classes
 {
-    public class Vechicle
+    public abstract class Vechicle : IMovable
     {
-        public virtual void Move()
+        public abstract void Move();
+
+        public virtual void Wheel()
         {
-            Console.WriteLine("Vechicle move");
+
         }
     }
 }

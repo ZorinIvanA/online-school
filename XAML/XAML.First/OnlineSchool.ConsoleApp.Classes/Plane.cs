@@ -4,12 +4,16 @@ using System.Text;
 
 namespace OnlineSchool.ConsoleApp.Classes
 {
-    public class Plane : Vechicle
+    public class Plane : Vechicle, IMovable
     {
         public override void Move()
         {
-            base.Move();
             Console.WriteLine("Plane move");
+        }
+
+        void IMovable.Move()
+        {
+            Console.WriteLine("Plane IMovable move");
         }
     }
 }

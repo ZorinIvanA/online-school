@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OnlineSchool.ConsoleApp.Classes
 {
-    public class Person
+    public abstract class Person
     {
         public string FIO;
         private DateTime Birthday;
