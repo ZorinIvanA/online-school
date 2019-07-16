@@ -66,24 +66,33 @@ namespace OnlineSchool.ConsoleApp.Classes
             #endregion
 
             #region Generic
-            Holder<Smartphone> holder = new Holder<Smartphone>();
-            holder._holdee = new Smartphone();
-            holder._holdee.Call();
+            //Holder<Smartphone> holder = new Holder<Smartphone>();
+            //holder._holdee = new Smartphone();
+            //holder._holdee.Call();
 
-            Holder<TabletPC> holder1 = new Holder<TabletPC>();
-            holder1._holdee = new TabletPC();
-            holder1._holdee.Open();
+            //Holder<TabletPC> holder1 = new Holder<TabletPC>();
+            //holder1._holdee = new TabletPC();
+            //holder1._holdee.Open();
 
-            Holder<int> holder2 = new Holder<int>();
-            holder2._holdee = 2;
+            //Holder<int> holder2 = new Holder<int>();
+            //holder2._holdee = 2;
 
-            List<int> intList = new List<int> { 1, 2, 5 };
-            List<Smartphone> smartphonesList = new List<Smartphone>
-            {
-                new Smartphone(), new Smartphone(), new Smartphone()
-            };
+            //List<int> intList = new List<int> { 1, 2, 5 };
+            //List<Smartphone> smartphonesList = new List<Smartphone>
+            //{
+            //    new Smartphone(), new Smartphone(), new Smartphone()
+            //};
 
-            Console.WriteLine(holder.GetHoldee<double>(2.34));
+            //Console.WriteLine(holder.GetHoldee<double>(2.34));
+            #endregion
+
+            #region Properties
+            //Customer customer = new Customer();
+            //customer.BoughtDuringTheYear = 100;
+            //Console.WriteLine(customer.Discount);
+            //customer.BoughtDuringTheYear = 200;
+            //Console.WriteLine(customer.Discount);
+            //Console.WriteLine(customer.GetSumWithDiscount(100));
             #endregion
         }
     }
