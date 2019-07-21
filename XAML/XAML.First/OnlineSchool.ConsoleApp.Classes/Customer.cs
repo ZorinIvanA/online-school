@@ -5,18 +5,17 @@ using System.Text;
 namespace OnlineSchool.ConsoleApp.Classes
 {
     public class Customer
-    {
-        public decimal BoughtDuringTheYear { get; set; }
-        public double Discount
+    {        
+        public double DiscountSize
         {
             get
-            { return 0.01 * (double)BoughtDuringTheYear; }
-        }       
+            { return 0.01 * (double)HaveBought; }
+        }
+        public decimal HaveBought { get; set; }
 
-
-        public decimal GetSumWithDiscount(decimal sum)
+        public decimal GetSum(decimal sum)
         {
-            return sum * (decimal)(100 - Discount) / 100;
+            return sum - (decimal)DiscountSize;
         }
     }
 }

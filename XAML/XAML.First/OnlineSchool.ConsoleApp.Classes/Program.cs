@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OnlineSchool.ConsoleApp.Classes
 {
@@ -87,13 +88,12 @@ namespace OnlineSchool.ConsoleApp.Classes
             #endregion
 
             #region Properties
-            //Customer customer = new Customer();
-            //customer.BoughtDuringTheYear = 100;
-            //Console.WriteLine(customer.Discount);
-            //customer.BoughtDuringTheYear = 200;
-            //Console.WriteLine(customer.Discount);
-            //Console.WriteLine(customer.GetSumWithDiscount(100));
+            Customer customer = new Customer();
+            customer.HaveBought = 100;
+            Console.WriteLine($"сумма: {customer.GetSum(100)}, скидка {customer.DiscountSize}");
             #endregion
+
+
         }
     }
 }
