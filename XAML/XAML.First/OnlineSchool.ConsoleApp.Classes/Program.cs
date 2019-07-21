@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace OnlineSchool.ConsoleApp.Classes
 {
+    delegate int TwoArgsDelegate(int x, int y);
+    delegate void VoidDelegate(int x, int y);
+
     class Program
     {
         static void Main(string[] args)
@@ -88,12 +91,34 @@ namespace OnlineSchool.ConsoleApp.Classes
             #endregion
 
             #region Properties
-            Customer customer = new Customer();
-            customer.HaveBought = 100;
-            Console.WriteLine($"сумма: {customer.GetSum(100)}, скидка {customer.DiscountSize}");
+            //Customer customer = new Customer();
+            //customer.HaveBought = 100;
+            //Console.WriteLine($"сумма: {customer.GetSum(100)}, скидка {customer.DiscountSize}");
             #endregion
 
+            #region Delegate
+            TwoArgsDelegate del1 = GetSum;
+            TwoArgsDelegate del2 = GetDifference;
+            Console.WriteLine(del1(7, 5));
+            Console.WriteLine(del2(7, 5));
 
+            TwoArgsDelegate anonymousDelegate = delegate (int x, int y)
+            {
+                return x / y;
+            };
+            Console.WriteLine(anonymousDelegate(8, 4));
+            TwoArgsDelegate lambda1 = (x, y) => x * y;
+            Console.WriteLine(lambda1(8, 4));
+            VoidDelegate delVoid = (x, y) =>
+            {
+                var t = x * y;                
+                Console.WriteLine(del1(t, 10));
+            };
+            delVoid(5, 7);
+            #endregion
         }
+
+        static int GetSum(int x, int y) { return x + y; }
+        static int GetDifference(int x, int y) { return x - y; }
     }
 }
