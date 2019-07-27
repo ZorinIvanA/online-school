@@ -15,5 +15,10 @@ namespace OnlineSchool.ConsoleApp.Classes
         {
             Console.WriteLine("Plane IMovable move");
         }
+
+        public void OnShellBlasted(object sender, PowerEventArgs e)
+        {
+            Console.WriteLine($"Plane is alive: {e.Power < 1000}!");
+        }
     }
 }
