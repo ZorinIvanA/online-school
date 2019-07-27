@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineSchool.ConsoleApp.Classes.Units;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,6 +10,8 @@ namespace OnlineSchool.ConsoleApp.Classes
 
     class Program
     {
+        const string MY_CONST = "tst";
+
         static void Main(string[] args)
         {
             #region Классы
@@ -97,28 +100,51 @@ namespace OnlineSchool.ConsoleApp.Classes
             #endregion
 
             #region Delegate
-            TwoArgsDelegate del1 = GetSum;
-            TwoArgsDelegate del2 = GetDifference;
-            Console.WriteLine(del1(7, 5));
-            Console.WriteLine(del2(7, 5));
+            //TwoArgsDelegate del1 = GetSum;
+            //TwoArgsDelegate del2 = GetDifference;
+            //Console.WriteLine(del1(7, 5));
+            //Console.WriteLine(del2(7, 5));
 
-            TwoArgsDelegate anonymousDelegate = delegate (int x, int y)
-            {
-                return x / y;
-            };
-            Console.WriteLine(anonymousDelegate(8, 4));
-            TwoArgsDelegate lambda1 = (x, y) => x * y;
-            Console.WriteLine(lambda1(8, 4));
-            VoidDelegate delVoid = (x, y) =>
-            {
-                var t = x * y;                
-                Console.WriteLine(del1(t, 10));
-            };
-            delVoid(5, 7);
+            //TwoArgsDelegate anonymousDelegate = delegate (int x, int y)
+            //{
+            //    return x / y;
+            //};
+            //Console.WriteLine(anonymousDelegate(8, 4));
+            //TwoArgsDelegate lambda1 = (x, y) => x * y;
+            //Console.WriteLine(lambda1(8, 4));
+            //VoidDelegate delVoid = (x, y) =>
+            //{
+            //    var t = x * y;                
+            //    Console.WriteLine(del1(t, 10));
+            //};
+            //delVoid(5, 7);
+            #endregion
+
+            #region Static class
+            //Automobile automobile1 = new Automobile();
+            //Automobile automobile2 = new Automobile();
+            //Automobile automobile3 = new Automobile();
+            //Console.WriteLine(Automobile.SoldOut);
+            //Console.WriteLine(Automobile.GetCost());
+
+            //EmailSender.Send("test@test.test", "test");            
+            #endregion
+
+            #region Events
+            Shell shell = new Shell();
+            Tank tank = new Tank();
+            Plane plane = new Plane();
+            shell.Blasted += tank.OnShellBlasted;
+            shell.Blasted += plane.OnShellBlasted;
+            shell.Blasted -= plane.OnShellBlasted;
+
+            shell.Blast(1200);
             #endregion
         }
 
+        #region Methods for Delegates
         static int GetSum(int x, int y) { return x + y; }
         static int GetDifference(int x, int y) { return x - y; }
+        #endregion
     }
 }
