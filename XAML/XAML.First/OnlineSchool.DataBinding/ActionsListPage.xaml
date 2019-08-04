@@ -12,7 +12,11 @@
     </Page.DataContext>
 
     <Grid>
-        <ItemsControl ItemsSource="{Binding Actions}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ItemsControl ItemsSource="{Binding Actions, Mode=TwoWay}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Background="{Binding PassedColor}">
@@ -22,5 +26,8 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+
+        <Button Grid.Row="1" Command="{Binding AddElement}" 
+                Content="Добавить" CommandParameter="{Binding Actions}"/>
     </Grid>
 </Page>

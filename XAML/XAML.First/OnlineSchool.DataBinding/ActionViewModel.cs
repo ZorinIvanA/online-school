@@ -20,6 +20,13 @@ namespace OnlineSchool.DataBinding
         public ActionType ActionType { get; set; }
         public ICommand CancelCommand { get; set; }
         public SolidColorBrush PassedColor { get; set; }
+        public static Dictionary<ActionType, string> ActionTypes { get; set; } =
+            new Dictionary<ActionType, string>
+            {
+                { ActionType.Private, "Личное"},
+                { ActionType.Job, "Рабочее"},
+                { ActionType.Education, "Учёба"},
+            };
 
         public ActionViewModel()
         {

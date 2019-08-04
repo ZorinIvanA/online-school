@@ -26,27 +26,7 @@ namespace OnlineSchool.DataBinding.Commands
             Debug.WriteLine(commandParam?.ActionName ?? NOT_FOUND);
             Debug.WriteLine(commandParam?.Description ?? NOT_FOUND);
 
-            switch (commandParam.ActionType)
-            {
-                case ActionType.Private:
-                    Debug.WriteLine("Личное");
-                    break;
-                case ActionType.Job:
-                    {
-                        Debug.WriteLine("Рабочее");
-                    }
-                    break;
-                case ActionType.Education:
-                    {
-                        Debug.WriteLine("Учёба");
-                    }
-                    break;
-                default:
-                    {
-                        Debug.WriteLine("Неизвестно");
-                    }
-                    break;
-            }
+            Debug.WriteLine(ActionViewModel.ActionTypes[commandParam.ActionType]);
         }
     }
 }
