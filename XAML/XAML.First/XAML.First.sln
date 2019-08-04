@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAML.First", "XAML.First\XA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineSchool.ConsoleApp.DataTypes", "OnlineSchool.ConsoleApp.DataTypes\OnlineSchool.ConsoleApp.DataTypes.csproj", "{6A8052C1-F275-44A6-9790-8B0BE82C6BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSchool.ConsoleApp.Classes", "OnlineSchool.ConsoleApp.Classes\OnlineSchool.ConsoleApp.Classes.csproj", "{916FC00B-BE81-48F0-B1CA-90B2EEA4BAAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineSchool.ConsoleApp.Classes", "OnlineSchool.ConsoleApp.Classes\OnlineSchool.ConsoleApp.Classes.csproj", "{916FC00B-BE81-48F0-B1CA-90B2EEA4BAAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSchool.TodoList", "OnlineSchool.DataBinding\OnlineSchool.TodoList.csproj", "{BF162DE9-D6C6-4B15-BA94-CEF104394190}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,34 @@ Global
 		{916FC00B-BE81-48F0-B1CA-90B2EEA4BAAD}.Release|x64.Build.0 = Release|Any CPU
 		{916FC00B-BE81-48F0-B1CA-90B2EEA4BAAD}.Release|x86.ActiveCfg = Release|Any CPU
 		{916FC00B-BE81-48F0-B1CA-90B2EEA4BAAD}.Release|x86.Build.0 = Release|Any CPU
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|Any CPU.Build.0 = Debug|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|ARM.Build.0 = Debug|ARM
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|ARM64.Build.0 = Debug|ARM64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|x64.ActiveCfg = Debug|x64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|x64.Build.0 = Debug|x64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|x64.Deploy.0 = Debug|x64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|x86.ActiveCfg = Debug|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|x86.Build.0 = Debug|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Debug|x86.Deploy.0 = Debug|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|Any CPU.ActiveCfg = Release|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|ARM.ActiveCfg = Release|ARM
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|ARM.Build.0 = Release|ARM
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|ARM.Deploy.0 = Release|ARM
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|ARM64.ActiveCfg = Release|ARM64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|ARM64.Build.0 = Release|ARM64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|ARM64.Deploy.0 = Release|ARM64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|x64.ActiveCfg = Release|x64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|x64.Build.0 = Release|x64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|x64.Deploy.0 = Release|x64
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|x86.ActiveCfg = Release|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|x86.Build.0 = Release|x86
+		{BF162DE9-D6C6-4B15-BA94-CEF104394190}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
