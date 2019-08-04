@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
 
 namespace OnlineSchool.DataBinding
 {
@@ -17,6 +19,7 @@ namespace OnlineSchool.DataBinding
         private DateTimeOffset completeDate;
         public ActionType ActionType { get; set; }
         public ICommand CancelCommand { get; set; }
+        public SolidColorBrush PassedColor { get; set; }
 
         public ActionViewModel()
         {

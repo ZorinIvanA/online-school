@@ -15,7 +15,7 @@
         <ItemsControl ItemsSource="{Binding Actions}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Background="{Binding PassedColor}">
                         <TextBlock Text="{Binding ActionName}"/>
                         <TextBlock Text="{Binding CompleteDate}"/>
                     </StackPanel>

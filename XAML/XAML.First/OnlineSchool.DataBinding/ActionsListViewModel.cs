@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
 
 namespace OnlineSchool.DataBinding
 {
     public class ActionsListViewModel
     {
         public ActionViewModel[] Actions { get; set; }
-        public int[,] Actions2 { get; set; }
 
         public ActionsListViewModel()
         {
-            Actions2 = new int[4, 7];
-            Actions2[3,1] = 2; 
-
             Actions = new ActionViewModel[3];
             Actions[0] = new ActionViewModel
             {
@@ -32,6 +30,16 @@ namespace OnlineSchool.DataBinding
                 ActionName = "Действие 3",
                 CompleteDate = new DateTime(1900, 1, 1)
             };
+
+            for (int i = 0; i < Actions.Length; i++)
+            {
+                if (Actions[i].CompleteDate.Date < DateTime.Now.Date)
+                    Actions[i].PassedColor = new SolidColorBrush(Colors.Red);
+                else if (Actions[i].CompleteDate.Date == DateTime.Now.Date)
+                    Actions[i].PassedColor = new SolidColorBrush(Colors.Yellow);
+                else
+                    Actions[i].PassedColor = new SolidColorBrush(Colors.Green);              
+            }
         }
     }
 }
