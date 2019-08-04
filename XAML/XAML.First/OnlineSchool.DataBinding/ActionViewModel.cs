@@ -1,4 +1,5 @@
 ﻿using OnlineSchool.DataBinding.Commands;
+using OnlineSchool.DataBinding.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace OnlineSchool.DataBinding
         private string name;
         private string description;
         private DateTimeOffset completeDate;
+        public ActionType ActionType { get; set; }
         public ICommand CancelCommand { get; set; }
 
         public ActionViewModel()
