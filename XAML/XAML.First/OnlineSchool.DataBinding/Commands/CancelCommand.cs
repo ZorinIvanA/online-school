@@ -6,6 +6,7 @@ namespace OnlineSchool.DataBinding.Commands
 {
     public class CancelCommand : ICommand
     {
+        const string NOT_FOUND = "Не определено";
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
@@ -18,9 +19,9 @@ namespace OnlineSchool.DataBinding.Commands
             Debug.WriteLine("Command executed");
             var commandParam = parameter as ActionViewModel;
 
-            Debug.WriteLine(commandParam.CompleteDate);
-            Debug.WriteLine(commandParam.ActionName);
-            Debug.WriteLine(commandParam.Description);
+            Debug.WriteLine(commandParam?.CompleteDate);
+            Debug.WriteLine(commandParam?.ActionName ?? NOT_FOUND);
+            Debug.WriteLine(commandParam?.Description ?? NOT_FOUND);
         }
     }
 }

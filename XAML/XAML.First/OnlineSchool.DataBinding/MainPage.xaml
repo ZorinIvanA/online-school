@@ -34,7 +34,8 @@
             <DatePicker Date="{Binding CompleteDate, Mode=TwoWay}"/>
         </StackPanel>
         <Button Grid.Row="2" Content="Отмена" Command="{Binding CancelCommand}"
-                CommandParameter="{Binding ElementName=ActionPage, Path=DataContext}"
+                      CommandParameter="{Binding ElementName=ActionPage, 
+            Path=DataContext}"
                 />
         <Button Grid.Row="2" Grid.Column="1" Content="Сохранить"/>
     </Grid>
