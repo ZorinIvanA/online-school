@@ -1,9 +1,11 @@
-﻿using System;
+﻿using OnlineSchool.DataBinding.Commands;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace OnlineSchool.DataBinding
 {
@@ -12,6 +14,12 @@ namespace OnlineSchool.DataBinding
         private string name;
         private string description;
         private DateTimeOffset completeDate;
+        public ICommand CancelCommand { get; set; }
+
+        public ActionViewModel()
+        {
+            CancelCommand = new CancelCommand();
+        }
 
         public string ActionName
         {

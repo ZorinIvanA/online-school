@@ -27,16 +27,5 @@ namespace OnlineSchool.DataBinding
         {
             this.InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var action = DataContext as ActionViewModel;
-
-            Debug.WriteLine(action.CompleteDate);
-            Debug.WriteLine(action.ActionName);
-            Debug.WriteLine(action.Description);
-
-            action.ActionName = action.ActionName + "111";
-        }
     }
 }
